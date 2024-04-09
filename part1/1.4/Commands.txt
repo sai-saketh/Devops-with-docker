@@ -1,0 +1,27 @@
+C:\Users\DELL>docker run -it ubuntu sh -c "while true; do echo 'Input website:'; read website; echo 'Searching..'; sleep 1; curl http://$website; done"
+Input website:
+helsinki.fi
+Searching..
+sh: 1: curl: not found
+Input website:
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.22.1</center>
+</body>
+</html>
+Input website:
+
+
+// commands used to install curl package
+C:\Users\DELL>docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED              STATUS              PORTS     NAMES
+ea4cd53ec46c   ubuntu                                     "sh -c 'while true; …"   About a minute ago   Up About a minute             dazzling_tu
+d991c16af756   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    24 minutes ago       Up 24 minutes                 charming_agnesi
+C:\Users\DELL>docker exec -it ea bash
+root@ea4cd53ec46c:/# apt-get update
+root@ea4cd53ec46c:/# apt-get install curl
+

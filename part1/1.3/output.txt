@@ -1,0 +1,17 @@
+C:\Users\DELL>docker run -d -it devopsdockeruh/simple-web-service:ubuntu
+d991c16af75671c88239059d920e53138217b1a931a4e2268fb77455f67fe522
+
+C:\Users\DELL>docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED         STATUS         PORTS     NAMES
+d991c16af756   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   5 seconds ago   Up 4 seconds
+   charming_agnesi
+
+C:\Users\DELL>docker exec -it d9 bash
+root@d991c16af756:/usr/src/app# ls
+server  text.log
+root@d991c16af756:/usr/src/app# tail -f ./text.log
+2024-04-09 12:20:41 +0000 UTC
+2024-04-09 12:20:43 +0000 UTC
+2024-04-09 12:20:45 +0000 UTC
+2024-04-09 12:20:47 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
