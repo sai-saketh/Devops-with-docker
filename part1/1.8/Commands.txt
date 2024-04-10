@@ -1,0 +1,3 @@
+C:\Users\DELL\Documents\Docker_Course_Projects\part1\1.8>docker build -t web-server .
+
+C:\Users\DELL\Documents\Docker_Course_Projects\part1\1.8>docker run web-server
